@@ -21,10 +21,10 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <div class="header" id="header"></div>
+          <div class="header" id="header" style="margin: 255px;"></div>
           <div id="cimg" class="">
-            <img alt="country flag" width="192" />
-            <h1 id="cn" class="text-center">no country</h1>
+            <img src="nothing.svg" alt="country flag" width="192" />
+            <h1 id="cn" class="text-center">There is no National day today</h1>
           </div>
         </div>
       </div>
@@ -951,6 +951,7 @@
       var flag = []; // array to hold the flags of the countries
       var namec = []; // array to hold the names of the countries
       var can = "";
+
       for (var i = 0; i < data.length; i++) {
         if (data[i].intdate == intdate1) {
           j.push(data[i]);
@@ -979,19 +980,26 @@
           console.log(can);
         }
 
-        var marg = 155;
+        var marg = 255;
 
         marg = marg / intcountry;
 
-        document.getElementById("header").style.margin = marg + "%";
+        document.getElementById("header").style.margin = marg + "px";
 
         document.getElementById("cimg").innerHTML = "";
         console.log(flag);
         document.getElementById("cimg").innerHTML = can;
+
+      }
+      function nocountry(){
+        
+
       }
 
       if (intcountry == 0) {
         console.log("no country found");
+        nocountry();
+
       } else {
         country(j);
       }
