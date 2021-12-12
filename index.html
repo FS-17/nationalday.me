@@ -21,7 +21,11 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <div class="header" id="header" style="margin: 255px;"></div>
+          <div
+            class="header"
+            id="header"
+            style="margin: 255px 0px 0px 0px"
+          ></div>
           <div id="cimg" class="">
             <img src="nothing.svg" alt="country flag" width="192" />
             <h1 id="cn" class="text-center">There is no National day today</h1>
@@ -984,22 +988,18 @@
 
         marg = marg / intcountry;
 
-        document.getElementById("header").style.margin = marg + "px";
+        document.getElementById("header").style.margin =
+          marg + "px" + " 0px 0px 0px";
 
         document.getElementById("cimg").innerHTML = "";
         console.log(flag);
         document.getElementById("cimg").innerHTML = can;
-
       }
-      function nocountry(){
-        
-
-      }
+      function nocountry() {}
 
       if (intcountry == 0) {
         console.log("no country found");
         nocountry();
-
       } else {
         country(j);
       }
